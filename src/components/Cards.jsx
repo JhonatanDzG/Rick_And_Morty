@@ -1,10 +1,10 @@
 import Card from "./Card";
-import "./Cards.css";
+import "./Css/Cards.css";
 
-export default function Cards({ characters }) {
+export default function Cards({ characters, onClose }) {
   return (
     <div className="CardsContainer">
-        {characters.map((element, index) => {
+        {characters && characters.map((element, index) => {
           return (
             <Card
               key={index}
@@ -15,10 +15,10 @@ export default function Cards({ characters }) {
               gender={element.gender}
               origin={element.origin.name}
               image={element.image}
-              onClose={() => window.alert("Emulamos que se cierra la card")}
+              onClose={onClose}
             />
           );
         })}
       </div>
-  );
+    );
 }

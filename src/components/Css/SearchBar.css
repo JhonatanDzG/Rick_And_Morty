@@ -1,0 +1,13 @@
+.SearchBar {
+  width: 100px;
+  height: 60px;
+  display: block;
+}
+
+.InputA {
+  border-radius: 15px;
+}
+
+.ButtonA {
+  border-radius: 15px;
+}
