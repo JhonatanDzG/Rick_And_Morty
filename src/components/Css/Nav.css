@@ -1,4 +1,18 @@
 .NavBar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: rgba(36, 35, 35, 0.776);
+    align-items: center;
+}
+
+.bAboutHome{
+    display: flex;
+}
+
+.bAboutHome button{
+    background: none;
+    height: 30px;
+    border-bottom: none;
 }

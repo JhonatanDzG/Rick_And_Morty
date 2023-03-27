@@ -9,3 +9,9 @@ img{
     border: 2px solid rgb(136, 101, 55);
     width: 90%;
 }
+
+.CloseCard{
+    background: none;
+    border-radius: 30px;
+    border-color: rgb(136, 101, 55);
+}

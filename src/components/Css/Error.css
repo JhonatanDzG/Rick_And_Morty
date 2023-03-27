@@ -1,0 +1,7 @@
+.ErrorContainer{
+    display: flex;
+    border: 5px dashed green;
+    justify-content: center;
+    align-items: center;
+    padding: 18%;
+}

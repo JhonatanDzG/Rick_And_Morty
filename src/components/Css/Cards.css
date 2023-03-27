@@ -1,8 +1,9 @@
 .CardsContainer{
     display: flex;
     padding: 25px;
-    justify-content: space-between;
-    border: 8px solid green;
-    background-position: relative ;
+    justify-content: space-evenly;
+    border: 2px dotted black;
+    height: 100%;
+    align-items: stretch;
 }
 
