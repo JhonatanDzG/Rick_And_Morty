@@ -1,7 +1,8 @@
 .CardsContainer{
     display: flex;
-    padding: 15px;
+    padding: 25px;
+    justify-content: space-between;
     border: 8px solid green;
-    background-image: url("https://images7.alphacoders.com/633/thumb-1920-633221.jpg");
+    background-position: relative ;
 }
 
