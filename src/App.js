@@ -4,9 +4,10 @@ import Nav from './components/Nav.jsx';
 import About from './components/About';
 import Detail from './components/Detail';
 import Error from './components/Error';
-import {useState} from 'react';
+import Form from "./components/Form"
+import {useState, useEffect} from 'react';
 import axios from "axios";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 
 // const example = [{
 //    id: 1,
@@ -24,7 +25,27 @@ import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
    const [characters, setCharacters] = useState([])
+   const navigate = useNavigate();
+   const [access, setAccess] = useState(false);
+   const EMAIL = "jhonatan@gmail.com";
+   const PASSWORD = "JhonatanD7"
 
+   const login = (userData) => {
+      if(userData.email === EMAIL && userData.password === PASSWORD){
+         setAccess(true);
+         navigate("/home");
+      }else{
+         alert("Credenciales incorrectas")
+      }
+   }
+
+
+   
+
+   useEffect(() => {
+      !access && navigate('/');
+   }, [access]);
+ 
 
    const onSearch = (id) => {
       axios
@@ -43,22 +64,28 @@ export default function App() {
       });
    }
 
-
-
    const onClose = (id) =>{
       setCharacters((oldChars) =>{
          return oldChars.filter((character) => character.id !==  id)
       })
    }
 
+const logOut = () => {
+      setAccess(false);
+      navigate("/");
+   }
+
+   const {pathname} = useLocation();
+
    return ( 
    <div className = 'App' >
-      <Nav onSearch = {onSearch}/>
-      <Routes>
+      {pathname !== "/" && <Nav logOut = {logOut} onSearch = {onSearch}/>}
+         <Routes>
          <Route path='home' element={<Cards onClose = {onClose} characters = {characters}/>}/>
          <Route path='about' element = {<About/>} />
          <Route path='detail/:id' element = {<Detail/>} />
          <Route path ="error" element={<Error/>} />
+         <Route path='/' element = {<Form login={login}/>}/>
       </Routes>
    </div>
    );
