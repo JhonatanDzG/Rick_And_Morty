@@ -1,0 +1,17 @@
+.Card{
+    border: 4px solid rgb(136, 101, 55);
+    background-image: url("https://th.bing.com/th/id/R.ea2498f65de9e57dcf10a39e07d1ebfb?rik=pWcEbuohcpRw6w&pid=ImgRaw&r=0");
+    width: 22%;
+    color: rgb(136, 101, 55);
+}
+
+img{
+    border: 2px solid rgb(136, 101, 55);
+    width: 90%;
+}
+
+.CloseCard{
+    background: none;
+    border-radius: 30px;
+    border-color: rgb(136, 101, 55);
+}

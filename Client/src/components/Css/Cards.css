@@ -1,0 +1,9 @@
+.CardsContainer{
+    display: flex;
+    padding: 25px;
+    justify-content: space-evenly;
+    border: 2px dotted black;
+    height: 100vh;
+    align-items: stretch;
+}
+

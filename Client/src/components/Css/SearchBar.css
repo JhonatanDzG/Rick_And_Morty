@@ -1,0 +1,14 @@
+.SearchBar {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+.InputA {
+  border-radius: 15px 0px 0px 15px
+}
+
+.ButtonA {
+  display: flex;
+  border-radius: 0px 15px 15px 0px;
+}

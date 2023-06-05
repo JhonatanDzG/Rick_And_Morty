@@ -1,0 +1,21 @@
+.DetailContainer{
+    display: flex;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.DetailText{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.DetailImage{
+    border: 10px;
+    border-style:double;
+    border-color: purple;
+    width: 300px;
+    border-radius: 190px;
+}
